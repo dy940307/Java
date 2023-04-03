@@ -5,7 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/*
+/* 참고
+
      개행
       - 파일을 작성할 때는 \n만으로도 개행할 수 있지만, 윈도우 콘솔에서는 Enter를 입력했을 때는 \r, \n의 순으로 입력된다.
       
@@ -21,6 +22,7 @@ import java.io.OutputStream;
       - FileOutputStream 객체는 내부적으로 메모리 버퍼를 사용하지 않으므로 flush()를 생략할 수 있다.
       - 하지만 콘솔, 네트워크 등 메모리 버퍼를 사용할 때 실제로 출력하기 위해서는 반드시 flush() 메서드를 호출해야 한다.
       - 처음에는 내부 메모리 버퍼를 사용할 때와 사용하지 않을 때를 일일이 구분할 필요 없이 write() 메서드 호출 이후에는 가급적 flush()를 사용하는 게 편할 수 있다.
+      
  */
 
 public class Io_2 {
