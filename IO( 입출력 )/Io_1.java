@@ -33,10 +33,10 @@ import java.nio.charset.Charset;
        
    4. 문자셋
     - EUC KR	: 영어 1byte, 한글 2byte( 한글 누락o )
-    - MS949		: 영어 1byte, 한글 2byte( 한글 누락X )
+    - MS949	: 영어 1byte, 한글 2byte( 한글 누락X )
     
-    - UTF-16	: 영어 2byte, 한글 2byte( BOM 코드로 인한 2byte 추가 )	// 고정 길이
-    - UTF-8		: 영어 1byte, 한글 3byte							// 가변 길이
+    - UTF-16	: 영어 2byte, 한글 2byte( BOM 코드로 인한 2byte 추가 )	  // 고정 길이
+    - UTF-8	: 영어 1byte, 한글 3byte					// 가변 길이
     
  */
 
@@ -55,41 +55,41 @@ public class Io_1 {
 			newFile.createNewFile();
 		
 		// 영어 문자열 분해
-		byte[] b1 = "abc".getBytes();									// 설정된 문자셋 기본값( UTF-8 )
-		byte[] b2 = "abc".getBytes(Charset.defaultCharset());			// 설정된 문자셋 기본값( UTF-8 )
+		byte[] b1 = "abc".getBytes();						      // 설정된 문자셋 기본값( UTF-8 )
+		byte[] b2 = "abc".getBytes(Charset.defaultCharset());			      // 설정된 문자셋 기본값( UTF-8 )
 		byte[] b3 = "abc".getBytes("UTF-8");					
 		byte[] b4 = "abc".getBytes("UTF-16");					
 	
 		// 분해한 영어 문자열을 저장한 byte[] 길이
-		System.out.println(b1.length);									// 길이 3( UTF-8로 분해한 길이 )
-		System.out.println(b2.length);									// 길이 3( UTF-8로 분해한 길이 )
-		System.out.println(b3.length);									// 길이 3( UTF-8로 분해한 길이 )
-		System.out.println(b4.length);									// 길이 8( UTF-16으로 분해한 길이 )
+		System.out.println(b1.length);						       // 길이 3( UTF-8로 분해한 길이 )
+		System.out.println(b2.length);						       // 길이 3( UTF-8로 분해한 길이 )
+		System.out.println(b3.length);						       // 길이 3( UTF-8로 분해한 길이 )
+		System.out.println(b4.length);						       // 길이 8( UTF-16으로 분해한 길이 )
 		
 		// 분해한 영어 문자열 String으로 조합
-		System.out.println(new String(b1));								// abc
-		System.out.println(new String(b2, Charset.defaultCharset()));	// abc
-		System.out.println(new String(b3, "UTF-8"));					// abc
-		System.out.println(new String(b4, "UTF-16"));					// abc
+		System.out.println(new String(b1));					       // abc
+		System.out.println(new String(b2, Charset.defaultCharset()));	 	       // abc
+		System.out.println(new String(b3, "UTF-8"));				       // abc
+		System.out.println(new String(b4, "UTF-16"));				       // abc
 		
-		System.out.println();							// 한 칸 띄우기
+		System.out.println();							       // 한 칸 띄우기
 		
 		// 한글 문자열 분해
-		byte[] b5 = "가나다".getBytes();					// 설정한 문자셋 기본값( UTF-8 )
-		byte[] b6 = "봵봵".getBytes("EUC-KR");			// EUC-KR은 누락된 한글이 있으므로 "봵봵" 문자열 대응할 수 없음.
-		byte[] b7 = "봵봵".getBytes("MS949");				// MS949는 누락된 한글이 없으므로 "봵봵" 문자열 대응할 수 있음.
+		byte[] b5 = "가나다".getBytes();						     // 설정한 문자셋 기본값( UTF-8 )
+		byte[] b6 = "봵봵".getBytes("EUC-KR");					      // EUC-KR은 누락된 한글이 있으므로 "봵봵" 문자열 대응할 수 없음.
+		byte[] b7 = "봵봵".getBytes("MS949");					      // MS949는 누락된 한글이 없으므로 "봵봵" 문자열 대응할 수 있음.
 
 		// 분해한 한글 문자열을 저장한 byte[] 길이
-		System.out.println(b5.length);					// 길이 9( UTF-8로 분해한 길이 )
-		System.out.println(b6.length);					// 길이 2( EUC-KR 문자셋에 포함되지 않는 문자를 분해하였으므로 '봵'은 '?' 문자 하나로 분해된다. "봵봵" -> "??" ).
-		System.out.println(b7.length);					// 길이 4( MS949로 분해한 길이 )
+		System.out.println(b5.length);							// 길이 9( UTF-8로 분해한 길이 )
+		System.out.println(b6.length);							// 길이 2( EUC-KR 문자셋에 포함되지 않는 문자를 분해하였으므로 '봵'은 '?' 문자 하나로 분해된다. "봵봵" -> "??" ).
+		System.out.println(b7.length);							// 길이 4( MS949로 분해한 길이 )
 		
 		// 분해한 한글 문자열 String으로 조합
-		System.out.println(new String(b5));				// 가나다
-		System.out.println(new String(b6, "EUC-KR"));	// ??
-		System.out.println(new String(b7, "MS949"));	// 봵봵
+		System.out.println(new String(b5));						// 가나다
+		System.out.println(new String(b6, "EUC-KR"));					// ??
+		System.out.println(new String(b7, "MS949"));					// 봵봵
 		
-		System.out.println();							// 한 칸 띄우기
+		System.out.println();								// 한 칸 띄우기
 		
 		// 문자셋 객체 생성 및 활용
 		Charset cs1 = Charset.defaultCharset();
@@ -97,18 +97,18 @@ public class Io_1 {
 		Charset cs3 = Charset.forName("EUC-KR");
 		
 		// Charset 타입의 참조변수를 매개변수로 전달하여 한글 문자열 분해
-		byte[] b8 = "안녕하세요".getBytes(cs1);				// 설정한 문자셋 기본값( UTF-8 )
-		byte[] b9 = "안녕하세요".getBytes(cs2);				// MS949
-		byte[] b10 = "안녕하세요".getBytes(cs3);			// EUC-KR
-		
+		byte[] b8 = "안녕하세요".getBytes(cs1);				    // 설정한 문자셋 기본값( UTF-8 )
+		byte[] b9 = "안녕하세요".getBytes(cs2);				    // MS949
+		byte[] b10 = "안녕하세요".getBytes(cs3);				    // EUC-KR
+	
 		// 분해한 한글 문자열을 저장한 byte[] 길이
-		System.out.println(b8.length);					// 15( UTF-8로 분해한 길이 )
-		System.out.println(b9.length);					// 10( MS949로 분해한 길이 )
-		System.out.println(b10.length);					// 10( EUC-KR로 분해한 길이 )
+		System.out.println(b8.length);						// 15( UTF-8로 분해한 길이 )
+		System.out.println(b9.length);						// 10( MS949로 분해한 길이 )
+		System.out.println(b10.length);						// 10( EUC-KR로 분해한 길이 )
 		
-		// 분해한 문자열 조합
-		System.out.println(new String(b8, cs1));		// 안녕하세요
-		System.out.println(new String(b9, cs2));		// 안녕하세요
-		System.out.println(new String(b10, cs3));		// 안녕하세요	
+		// 분해한 문자열 조합	
+		System.out.println(new String(b8, cs1));				// 안녕하세요
+		System.out.println(new String(b9, cs2));				// 안녕하세요
+		System.out.println(new String(b10, cs3));				// 안녕하세요	
 	}
 }
