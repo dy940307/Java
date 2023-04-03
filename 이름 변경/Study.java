@@ -113,8 +113,5 @@ public class Study {
 		System.out.println(new String(b9, cs2));		// 안녕하세요
 		System.out.println(new String(b10, cs3));		// 안녕하세요
 		
-		
-		
-		
 	}
 }
