@@ -48,7 +48,6 @@ public class Io_2 {
 		os1.write('\n'); 
 		os1.close();
 
-		
 		// 영어 : n-byte 단위 쓰기( byte[]의 처음부터 끝가지 출력 ).
 		OutputStream os2 = new FileOutputStream(engFile, true);
 		byte[] byteArr1 = "Hello".getBytes();
