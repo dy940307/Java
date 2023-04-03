@@ -40,7 +40,7 @@ public class Io_2 {
 		// ---------- 영어 작성 ----------
 		
 		// 영어 : 1-byte 단위 쓰기
-		OutputStream os1 = new FileOutputStream(engFile, false); // false는 기본값으로 생략 가능( false : 덮어쓰기, true : 이어쓰기 )
+		OutputStream os1 = new FileOutputStream(engFile, false); // false는 기본값으로 생략 가능( false : 덮어쓰기, true : 이어쓰기 ).
 		os1.write('J');
 		os1.write('a');
 		os1.write('v');
@@ -49,7 +49,7 @@ public class Io_2 {
 		os1.close();
 
 		
-		// 영어 : n-byte 단위 쓰기( byte[]의 처음부터 끝가지 출력 )
+		// 영어 : n-byte 단위 쓰기( byte[]의 처음부터 끝가지 출력 ).
 		OutputStream os2 = new FileOutputStream(engFile, true);
 		byte[] byteArr1 = "Hello".getBytes();
 		
@@ -57,7 +57,7 @@ public class Io_2 {
 		os2.write('\n'); 
 		os2.close();
 		
-		// 영어 : n-byte 단위 쓰기( byte[]의 offset 위치부터 length만큼 읽어와 출력 )
+		// 영어 : n-byte 단위 쓰기( byte[]의 offset 위치부터 length만큼 읽어와 출력 ).
 		OutputStream os3 = new FileOutputStream(engFile, true);
 		byte[] byteArr2 = "Hello Java".getBytes();
 		
@@ -68,7 +68,7 @@ public class Io_2 {
 		
 		// ---------- 한글 작성 ---------- 
 		
-		// 한글 : n-byte 단위 쓰기( byte[]의 처음부터 끝가지 출력 )
+		// 한글 : n-byte 단위 쓰기( byte[]의 처음부터 끝가지 출력 ).
 		OutputStream os4 = new FileOutputStream(korFile);
 		byte[] byteArr3 = "안녕하세요".getBytes();
 		
@@ -76,7 +76,7 @@ public class Io_2 {
 		os4.write('\n');
 		os4.close();
 		
-		// 한글 : n-byte 단위 쓰기( byte[]의 offset 위치부터 length만큼 읽어와 출력 )
+		// 한글 : n-byte 단위 쓰기( byte[]의 offset 위치부터 length만큼 읽어와 출력 ).
 		OutputStream os5 = new FileOutputStream(korFile, true);
 		byte[] byteArr4 = "반갑습니다".getBytes();
 		
