@@ -25,8 +25,6 @@ import java.io.OutputStream;
       
  */
 
-
-
 public class Io_2 {
 	public static void main(String[] args) throws IOException {
 		File tempDir = new File("test");	     // 생성한 txt 파일을 관리할 폴더.
@@ -168,8 +166,7 @@ public class Io_2 {
 		String str = new String(byteArr9, 0, off + len, "UTF-8");
 		System.out.println(str);
 		
-		is5.close();
-		
+		is5.close();	
 	}
 }
 
