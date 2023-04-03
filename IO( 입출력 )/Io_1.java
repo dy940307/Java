@@ -43,7 +43,7 @@ public class Io_1 {
 		
 		// 실제 폴더 생성
 		if(!tempDir.exists())
-			tempDir.mkdir(); // mkdirs() : 경로상의 모든 폴더 생성.
+			tempDir.mkdir(); // mkdirs() : 경로상의 모든 폴더 생성
 		
 		// 실제 파일 생성
 		if(!newFile.exists())
