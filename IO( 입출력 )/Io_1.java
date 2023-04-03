@@ -36,7 +36,7 @@ import java.nio.charset.Charset;
     - MS949	: 영어 1byte, 한글 2byte( 한글 누락X )
     
     - UTF-16	: 영어 2byte, 한글 2byte( BOM 코드로 인한 2byte 추가 )	  // 고정 길이
-    - UTF-8	: 영어 1byte, 한글 3byte					// 가변 길이
+    - UTF-8	: 영어 1byte, 한글 3byte					  // 가변 길이
     
  */
 
