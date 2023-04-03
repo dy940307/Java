@@ -5,12 +5,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 
-
-// 1. 파일 및 폴더 생성 방법.
-// 2. 문자열을 Byte[]로 분해, byte[]을 문자열로 조합하는 방법.
-// 3. 문자셋 객체 생성 및 활용 방법.
-
-/* 참고 사항
+/* 참고
  
    1. 파일 구분자
     ㄴ new File("C:/abc/bcd.txt"), new File("C:\\abc\\bcd.txt"), new File("C:" + File.separator + "abc" + File.separator + "bcd.txt")
