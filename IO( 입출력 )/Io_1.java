@@ -75,7 +75,7 @@ public class Io_1 {
 		System.out.println();							       // 한 칸 띄우기
 		
 		// 한글 문자열 분해
-		byte[] b5 = "가나다".getBytes();						     // 설정한 문자셋 기본값( UTF-8 )
+		byte[] b5 = "가나다".getBytes();						      // 설정한 문자셋 기본값( UTF-8 )
 		byte[] b6 = "봵봵".getBytes("EUC-KR");					      // EUC-KR은 누락된 한글이 있으므로 "봵봵" 문자열 대응할 수 없음.
 		byte[] b7 = "봵봵".getBytes("MS949");					      // MS949는 누락된 한글이 없으므로 "봵봵" 문자열 대응할 수 있음.
 
