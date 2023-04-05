@@ -19,7 +19,5 @@ public class PlusMinus {
 		// 위에 for문은 오로지 "+-"만 출력한다. 홀수를 입력했으면 마지막에 "+"로 끝나기에 입력한 값이 홀수일 경우 "+"를 1개 출력해준다.
 		if(n % 2 != 0)
 			System.out.print("+");
-		
-		System.out.println();
  	}
 }
