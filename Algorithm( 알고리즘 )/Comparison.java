@@ -3,7 +3,6 @@ package study1;
 import java.util.Scanner;
 
 public class Comparison {
-	
 	// 최댓값을 구하는 메서드.
 	static int max3(int a, int b, int c) {
 		int max = a;
@@ -14,7 +13,6 @@ public class Comparison {
 		
 		return max;
 	}
-	
 	// 최솟값을 구하는 메서드.
 	static int min3(int a, int b, int c) {
 		int min = a;
@@ -25,7 +23,6 @@ public class Comparison {
 		
 		return min;
 	}
-	
 	// 중앙값을 구하는 메서드.
 	static int med3(int a, int b, int c) {
 		/*
@@ -37,7 +34,6 @@ public class Comparison {
 		 	
 		 	if문을 활용해 6가지 경우의 수가 나올 수 있도록 처리하고, 가운데에 위치한 매개변수 리턴.		 	  	
 		 */
-
 		if(a > b)
 			if(b > c)
 				return b;
@@ -59,7 +55,6 @@ public class Comparison {
 		// num1 ~ num3은 세 개의 값을 저장할 변수. 
 		// min, max, med는 세 값의 최솟값, 최댓값, 중앙값을 저장할 변수. 
 		// retry는 프로그램을 또 실행할건지 판단 여부할 때 필요한 조건값을 저장할 변수.
-		
 		
 		// 사용자가 또 입력하지 않겠다고 선택하기 전까지 계속 반복되는 do-while문.
 		do {
