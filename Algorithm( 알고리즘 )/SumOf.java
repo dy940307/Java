@@ -95,7 +95,7 @@ public class SumOf {
 		// 마지막 n값을 출력시킨다. "n="
 		System.out.print(n + "=");
 		
-		// 마지막 n값까지 sum 변수에 더해서 최종값을 구한 후, 최종값 출력. "n=sum"
+		// 마지막 n값까지 sum 변수에 더해서 최종값을 구한 후, 최종값 출력. "n=sum".
 		sum += n;
 		System.out.println(sum);
 		
