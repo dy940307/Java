@@ -23,9 +23,10 @@ import java.util.Scanner;
  */
 public class SumOf {
 	
-	// 두 개의 값을 넣으면 두개의 값 사이의 존재하는 값을 전부 더하다. 만약 두 개의 값이 같으면 값이 하나만 있으므로 그 값 하나만 리턴( ex : sumOf(2, 4) -> "sum = 2+3+4", sumOf(2, 2) -> "sum = 2" )
+	// 두 개의 값을 넣으면 두 개의 값 사이의 존재하는 값을 전부 더하다( ex : sum(2, 4) -> "2+3+4"의 결괎갑 출력
+	// 만약 두 개의 값이 같을 경우 값이 하나만 있으므로 그 값 하나만 리턴( ex : sumOf(2, 2) -> "2" 출력 )
 	static int sumOf(int a, int b) { 
-		int min = 0, max = 0, sum = 0;
+		int min = 0, max = 0, sum = 0; // 두 개의 값 중 더 작은 값을 min 변수, 더 큰 값을 max 변수에 저장.
 		
 		// 매개변수로 넘겨받은 두 개의 값의 크기를 비교
 		if(a < b) {
