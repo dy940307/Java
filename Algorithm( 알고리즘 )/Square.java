@@ -16,7 +16,7 @@ public class Square {
 		} while(n <= 0);
 		System.out.println();
 		
-		// for문 1개 + repeate() 메서드를 활용해서 정사각형 출력
+		// for문 1개 + repeat() 메서드를 활용해서 정사각형 출력
 		for(int i = 0; i < n; i++) {
 			System.out.println("*".repeat(n));
 		}
