@@ -12,7 +12,7 @@ import java.util.Scanner;
 		3. 단, 마지막 값의 경우 "5=" 가 출력되어야 하므로 마지막 값 전까지만 for문을 활용한다.
 		4. for문을 빠져 나오면 마지막 값인 "5="를 출력시킨다.
 		5. 이후, 1부터 5까지 더한 총합인 "15"를 출력시킨다.
-	    6. 그럼 "1+2+3+4+5=15"가 완성된다.
+	  	6. 그럼 "1+2+3+4+5=15"가 완성된다.
 
  */
 
@@ -23,8 +23,11 @@ public class SumVerbose {
 		int sum = 0;
 		
 		// n값 입력
-		System.out.print("n값: ");
-		n = stdIn.nextInt();
+		do {
+			System.out.print("n값: ");
+			n = stdIn.nextInt();
+		} while(n <= 0);
+		
 		
 		// 1부터 n값 전까지 "i+" 출력, 그러면서 1부터 n값 전까지의 총합도 구한다
 		for(int i = 1; i < n; i++) {
