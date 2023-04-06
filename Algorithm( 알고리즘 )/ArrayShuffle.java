@@ -7,7 +7,7 @@ public class ArrayShuffle {
 	// 배열의 인덱스 번호를 random() 메서드를 활용해 인덱스 범위를 매번 다르게 해서 값을 바꾸게 한다.
 	static void shuffleArray(int[] a) {
 		for(int i = 0; i < a.length; i++) {
-			int n = (int)(Math.random() * a.length); // 해당 배열의 인덱스 범위의 난수( 0 ~ 9 )
+			int n = (int)(Math.random() * a.length); // 해당 배열의 인덱스 범위의 난수( 0 ~ 9 ).
 			int tmp = a[0];
 			a[0] = a[n];
 			a[n] = tmp;
