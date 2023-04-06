@@ -2,7 +2,7 @@ package study1;
 
 import java.util.Arrays;
 
-public class ShuffleArray {
+public class ArrayShuffle {
 	// 매개변수로 건네 받은 배열의 요소를 석는 메서드. 
 	// 배열의 인덱스 번호를 random() 메서드를 활용해 인덱스 범위를 매번 다르게 해서 값을 바꾸게 한다.
 	static void shuffleArray(int[] a) {
