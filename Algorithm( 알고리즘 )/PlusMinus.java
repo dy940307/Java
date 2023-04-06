@@ -2,7 +2,7 @@ package study1;
 
 import java.util.Scanner;
 
-public class PlusMinus {
+public class SymbolPatternPrinter {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
