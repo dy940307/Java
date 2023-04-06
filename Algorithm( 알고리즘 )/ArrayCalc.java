@@ -3,44 +3,35 @@ package study1;
 import java.util.Scanner;
 
 public class ArrayCalc {
-	
 	// 배열의 최댓값 구하는 메서드
 	static int maxOf(int[] a) {
-		int max = a[0];
-		
+		int max = a[0];	
 		for(int i = 1; i < a.length; i++) {
 			if(a[i] > max)
 				max = a[i];
 		}
 		return max;
 	}
-	
 	// 배열의 최솟값 구하는 메서드
 	static int minOf(int[] a) {
-		int min = a[0];
-		
+		int min = a[0];	
 		for(int i = 1; i < a.length; i++) {
 			if(a[i] < min) 
 				min = a[i];
 		}
 		return min;
 	}
-	
 	// 배열의 총합 구하는 메서드
 	static int sumOf(int[] a) {
 		int sum = 0;
-		
 		for(int i = 0; i < a.length; i++) {
 			sum += a[i];
 		}
 		return sum;
 	}
-	
 	// 배열의 평균 구하는 메서드
 	static double avgOf(int[] a) {
-		int sum = sumOf(a);
-		double avg = (double)sum / a.length;
-		
+		double avg = (double)sumOf(a) / a.length;
 		return avg;
 	}
 	
