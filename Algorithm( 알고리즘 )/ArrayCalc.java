@@ -48,7 +48,7 @@ public class ArrayCalc {
 		Scanner sc = new Scanner(System.in);
 		int len;
 		
-		// 배열 길이 입력 후, 입력받은 값을 활용하여 배열 생성
+		// 배열 길이를 입력 받아서 그 값을 크기로 하여 배열 생성
 		do {
 			System.out.println("배열 길이 입력(1~10): ");
 			len = sc.nextInt();
