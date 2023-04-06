@@ -14,12 +14,11 @@ import java.util.Scanner;
 
 public class ArrayDuplicateRemover {
 	static int[] removeDuplicates(int[] a) {
-		int len = a.length;
-		int[] result = new int[len];
+		int[] result = new int[a.length];
 		int index = 0;
 		boolean found;
 	
-		for(int i = 0; i < len; i++) {
+		for(int i = 0; i < a.length; i++) {
 			found = false;
 			for(int j = 0; j < i; j++) {
 				if(a[i] == a[j]) {
@@ -27,16 +26,13 @@ public class ArrayDuplicateRemover {
 					break;
 				}
 			}
-			if(!found) { // 내부 for문에서 중복값이면 found가 true, 중복값이 아니면 false이다. 
-				result[index] = a[i];
-				index++;
-			}
+			if(!found) // 내부 for문에서 중복값이면 found가 true, 중복값이 아니면 false이다. 
+				result[index++] = a[i];	
 		}
-		
 		// 중복된 값을 뺀 배열 리턴.
-		return Arrays.copyOf(result, index);
-		
+		return Arrays.copyOf(result, index);	
 	}
+	
 	public static void main(String[] args) {
 		int arr[] = {1, 6, 4, 4, 5, 6, 1, 2, 5};
 		int[] result = removeDuplicates(arr);
