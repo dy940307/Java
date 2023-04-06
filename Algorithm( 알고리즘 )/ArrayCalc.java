@@ -1,18 +1,6 @@
 package study1;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Scanner;
-
-/*
- * 
-	n부터 n까지의 합 구하기
-	 ㄴ 2와 5를 입력하면 "2+3+4+5" 덧셈한 "14"가 출력된다.
-	 ㄴ 2와 2를 입력하면 "2" 밖에 없으므로 "2"가 출력된다.
-	 
- */
 
 public class ArrayCalc {
 	
