@@ -57,7 +57,6 @@ public class ArrCopy {
 		
 		// arr2의 요소를 arr1에 복사
 		arrCopy(arr1, arr2);
-		
 		System.out.println("arr2의 요소를 복사한 arr1 배열 요소: " + Arrays.toString(arr1));
 
 		// arr2의 요소를 arr1에 역순으로 복사
