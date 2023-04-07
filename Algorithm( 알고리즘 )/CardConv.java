@@ -25,7 +25,7 @@ public class CardConv {
 	static void cardConv(int n, int r, char[] d) {
 		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
-		// 10진수와 r진수의 나머지 값에 해당하는 값을 dhcar 변수에서 찾아서 배열 d에 저장
+		// 10진수와 r진수의 나머지 값에 해당하는 값을 dchar 변수에 있는 값을 참조해서 배열 d에 저장
 		for(int i = 0; i < d.length; i++) {
 			d[i] = dchar.charAt(n % r);
 			n /= r;
