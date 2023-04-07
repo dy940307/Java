@@ -15,7 +15,7 @@ public class ArrReverseEx {
 	static void reverse(int[] a) {
 		System.out.println(Arrays.toString(a));
 		for(int i = 0; i < a.length / 2; i++) {
-			System.out.println(" a[" + i + "]과 a[" + (a.length - 1 - i) + "]을 교환합니다.") ;
+			System.out.println(" a[" + i + "]과(와) a[" + (a.length - 1 - i) + "]을 교환합니다.") ;
 			swap(a, i, a.length - 1 - i);
 			System.out.println(Arrays.toString(a));
 		}
