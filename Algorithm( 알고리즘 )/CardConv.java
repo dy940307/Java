@@ -17,7 +17,11 @@ import java.util.Scanner;
 	
 	ㄴ 마지막에 +1을 하는 이유는, 자릿수를 계산할 때 소수점 이하 값을 버리기 때문.
 	 ㄴ 예를 들어, 10진수 9를 2진수로 변환하면 1001이다. 그러나 Math.log(9) / Math.log(2)를 계산하면 약 3.17이 나오므로, (int)로 형변환하여 3을 만든 후, +1을 해서 4로 만든다.
-
+	 
+	Math.log()	
+	 - Java의 Math.log() 메서드는 자연로그 (natural logarithm) 값을 계산한다( 자연로그( 밑이 자연상수 e인 로그 ) )
+	 - Math.log(x)는 x의 자연로그 값 반환. 예를 들어, Math.log(Math.E)는 1을 반환하고, Math.log(10)은 2.302585092994046을 반환한다.	 
+	 
 */
 
 public class CardConv {
