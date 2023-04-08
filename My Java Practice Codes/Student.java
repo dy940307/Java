@@ -4,28 +4,27 @@ import java.util.Scanner;
 import java.util.function.Function;
 
 /*
- * 
-	프로그램 내용: 
-	 - 학생 이름, 키, 몸무게, 시력 필드를 가지고 있고, 해당 필드들을 초기화하는 생성자를 가진 Student 클래스 작성.
-	 - 사용자로부터 학생 이름, 키, 몸무게, 시력을 입력받는다. 이때 몇 명의 학생을 입력할 건지 먼저 입력받은 후 각 학생의 정보를 입력받는다.
-	 - 객체 배열로 학생 정보를 저장하고, 이후 학생들의 '키, 몸무게, 시력'의 '최솟값, 최댓값, 평균, 빈도수'를 출력한다.
-	 
-	세부 조건
+
+ 	주요 내용: 
+	 - 사용자로부터 학생 이름, 키, 몸무게, 시력을 입력받는다. 
+	 - 사용자는 몇 명의 학생 정보를 입력할 건지 학생 수를 입력한 후에 각 학생의 정보를 입력한다.
+	 - 학생의 정보 입력이 끝나면 입력한 데이터를 바탕으로 '키, 몸무게, 시력'의 '최솟값, 최댓값, 평균, 빈도수' 정보를 출력한다.
+
+	세부 내용:
 	 - 학생 수 입력 범위 : 1 ~ 5
-	 - 키, 몸무게, 시력은 음수로 입력할 경우 재입력( 소수로 입력 가능하고, 소수점 몇 자리를 입력했든 소수점 첫 번째 자리까지만 화면에 출력 )
-	 - 시력 입력은 0.0 ~ 2.0까지 입력, 범위를 벗어나면 재입력
-	 - 키 빈도수 구간( 100 이하, 101 ~ 110, 111 ~ 120, 121 ~ 130, 131 ~ 140, 141 ~ 150, 151 ~ 160, 161 ~ 170, 171 ~ 180, 191 ~ 200, 200 이상 )
-	 - 몸무게 빈도수 구간( 20kg 이하, 21 ~ 40kg, 41 ~ 60kg, 61 ~ 80kg, 81 ~ 100kg, 101kg 이상 )
+	 - 키, 몸무게 입력 범위 : 0.0 이상( 소수점 자릿수 입력 제한은 없지만, 화면에 출력될 때는 첫 번째 자리까지만 출력 ).
+	 - 시력 입력 범위 : 0.0 ~ 2.0
+	 - 키 빈도수 구간 : 100 이하, 101 ~ 110, 111 ~ 120, 121 ~ 130, 131 ~ 140, 141 ~ 150, 151 ~ 160, 161 ~ 170, 171 ~ 180, 191 ~ 200, 200 이상
+	 - 몸무게 빈도수 구간 : 0kg 이하, 21 ~ 40kg, 41 ~ 60kg, 61 ~ 80kg, 81 ~ 100kg, 101kg 이상
 	
  */
 
 public class Student {
-	String name;							// 이름
-	double height;							// 키
-	double weight;							// 몸무게
-	double vision;							// 시력
+	String name;				// 이름
+	double height, weight, vision;		// 키, 몸무게, 시력
 	static final int VISION_FREQ_SIZE = 21;	// 시력 빈도수 저장할 배열 크기( 시력 범위 0.0 ~ 2.0( 0.1 단위로 총 21개 )
-				
+	
+	// 학생 이름, 키, 몸무게, 시력을 초기화하는 생성자
 	Student(String name, double height, double weight, double vision) {
 		this.name = name;
 		this.height = height;
@@ -34,34 +33,22 @@ public class Student {
 	}
 	
 	// 키 평균을 구하는 메서드
-	static double getAverageHeight(Student[] students) {
-		return getAverage(students, s -> s.height);
-	}
+	static double getAverageHeight(Student[] students) { return getAverage(students, s -> s.height); }
 	
 	// 몸무게 평균을 구하는 메서드
-	static double getAverageWeight(Student[] students) {
-		return getAverage(students, s -> s.weight);
-	}
+	static double getAverageWeight(Student[] students) { return getAverage(students, s -> s.weight); }
 	
 	// 시력 평균을 구하는 메서드
-	static double getAverageVision(Student[] students) {
-		return getAverage(students, s -> s.vision);
-	}
+	static double getAverageVision(Student[] students) { return getAverage(students, s -> s.vision); }
 	
 	// 키 최솟값과 최댓값을 구하는 메서드
-	static double[] getMinMaxHeight(Student[] students) {
-			return getMinMaxValues(students, "height");
-	}
+	static double[] getMinMaxHeight(Student[] students) { return getMinMaxValues(students, "height"); }
 	
 	// 몸무게 최솟값과 최댓값을 구하는 메서드
-	static double[] getMinMaxWeight(Student[] students) {
-		return getMinMaxValues(students, "weight");
-	}
+	static double[] getMinMaxWeight(Student[] students) { return getMinMaxValues(students, "weight"); }
 	
 	// 시력 최솟값과 최댓값을 구하는 메서드
-	static double[] getMinMaxVision(Student[] students) {
-		return getMinMaxValues(students, "vision");
-	}
+	static double[] getMinMaxVision(Student[] students) { return getMinMaxValues(students, "vision"); }
 	
 	// 평균을 구하는 메서드( 소수점 첫째 자리 반환( 나머지 자리 값들은 버림 처리 )
 	static double getAverage(Student[] students, Function<Student, Double> attributeSelector) {
@@ -70,20 +57,19 @@ public class Student {
 	        sum += attributeSelector.apply(students[i]);
 	    }
 	    double avg = sum / students.length;
-	    avg = Math.floor(avg * 10)
-	    		/ 10;
+	    avg = Math.floor(avg * 10) / 10;
 	    return avg;
 	}
-	
+         
 	// 최솟값과 최댓값을 구하는 메서드
 	static double[] getMinMaxValues(Student[] students, String field) {
 	    double[] result = new double[2];	// 최솟값과 최댓값을 저장
 	    double min = 0.0;
 	    double max = 0.0;
 	    
-	    // 구분자(field)에 따라서 최솟값과 최댓값을 구한다
+	    // 구분자( field )에 따라서 최솟값과 최댓값을 구한다
 	    switch (field) {
-	    	case "height":
+	    	case "height": // 입력받은 학생 키의 최솟값과 최댓값을 구한다
 	    		min = students[0].height;
 	    		max = students[0].height;
 	    		for (int i = 1; i < students.length; i++) {
@@ -93,7 +79,7 @@ public class Student {
 	    				max = students[i].height;
 	    			}
 	    			break;
-	    	case "weight":
+	    	case "weight": // 입력받은 학생 몸무게의 최솟값과 최댓값을 구한다
 	            min = students[0].weight;
 	            max = students[0].weight;
 	            for (int i = 1; i < students.length; i++) {
@@ -103,7 +89,7 @@ public class Student {
 	                    max = students[i].weight;
 	            }
 	            break;
-	        case "vision":
+	        case "vision": // 입력받은 학생 시력의 최솟값과 최댓값을 구한다
 	            min = students[0].vision;
 	            max = students[0].vision;
 	            for (int i = 1; i < students.length; i++) {
@@ -113,12 +99,12 @@ public class Student {
 	                    max = students[i].vision;
 	            }
 	            break;
-	        default:
+	        default: // 존재하지 않는 학생 정보( 키, 몸무게, 시력 등 )일 경우 유효하지 않는 값이라고 화면에 출력한다
 	            System.out.println("Invalid field");
 	            return null;
 	    }
 	    
-	    // 0번 인덱스에 최솟값, 1번 인덱스에 최댓값을 저장하고 리턴
+	    // switch문에서 구한 최솟값을 0번 인덱스, 최댓값을 1번 인덱스에 저장
 	    result[0] = min;
 	    result[1] = max;
 	    return result;
@@ -128,8 +114,8 @@ public class Student {
 	static int[] getFrequencyHeight(Student[] students) {
 		int[] freq = new int[12];
 		for(int i = 0; i < students.length; i++) {
-			double height = students[i].height;
-			if 		(height <= 100)	freq[0]++;	// 키 100 이하
+		    double height = students[i].height;
+		    if 	    (height <= 100) freq[0]++;	// 키 100 이하
 		    else if (height <= 110) freq[1]++;	// 키 101 ~ 110
 		    else if (height <= 120) freq[2]++;	// 키 111 ~ 120
 		    else if (height <= 130) freq[3]++;	// 키 121 ~ 130
@@ -140,7 +126,7 @@ public class Student {
 		    else if (height <= 180) freq[8]++;	// 키 171 ~ 180
 		    else if (height <= 190) freq[9]++;	// 키 181 ~ 190
 		    else if (height <= 200) freq[10]++;	// 키 191 ~ 200
-		    else 					freq[11]++;	// 키 200 이상  
+		    else 		    freq[11]++;	// 키 200 이상  
 		}
 		return freq;
 	}
@@ -150,13 +136,12 @@ public class Student {
 	    int[] freq = new int[6];
 	    for(int i = 0; i < students.length; i++) {
 	        double weight = students[i].weight;
-	        
-	        if(weight <= 20) 		freq[0]++;	// 몸무게 20kg 이하
+	        if(weight <= 20) 	freq[0]++;	// 몸무게 20kg 이하
 	        else if(weight <= 40)	freq[1]++;	// 몸무게 21 ~ 40kg
 	        else if(weight <= 60)	freq[2]++;	// 몸무게 41 ~ 60kg
 	        else if(weight <= 80)	freq[3]++;	// 몸무게 61 ~ 80kg
 	        else if(weight <= 100)	freq[4]++;	// 몸무게 81 ~ 100kg
-	        else 					freq[5]++;	// 몸무게 101kg 이상
+	        else 			freq[5]++;	// 몸무게 101kg 이상
 	    }
 	    return freq;
 	}
@@ -247,21 +232,21 @@ public class Student {
 		System.out.println("[키 빈도수 출력]: ------------------------------");
 		for(int i = 0; i < heightFreq.length; i++) {
 			String range;
-            switch(i) {
-                case 0:  range = " 100 이하: ";		break;
-                case 1:  range = " 101 ~ 110: ";	break;
-                case 2:  range = " 111 ~ 120: ";	break;
-                case 3:  range = " 121 ~ 130: ";	break;
-                case 4:  range = " 131 ~ 140: ";	break;
-                case 5:  range = " 141 ~ 150: ";	break;
-                case 6:  range = " 151 ~ 160: ";	break;
-                case 7:  range = " 161 ~ 170: ";	break;
-                case 8:  range = " 171 ~ 180: ";	break;
-                case 9:  range = " 181 ~ 190: ";	break;
-                case 10: range = " 191 ~ 200: ";	break;
-                default: range = " 201 이상: ";		break;
-            }
-            System.out.println(range + heightFreq[i] + "명");
+           		switch(i) {
+                		case 0:  range = " 100 이하: ";	break;
+				case 1:  range = " 101 ~ 110: ";  break;
+				case 2:  range = " 111 ~ 120: ";  break;
+				case 3:  range = " 121 ~ 130: ";  break;
+				case 4:  range = " 131 ~ 140: ";  break;
+				case 5:  range = " 141 ~ 150: ";  break;
+				case 6:  range = " 151 ~ 160: ";  break;
+				case 7:  range = " 161 ~ 170: ";  break;
+				case 8:  range = " 171 ~ 180: ";  break;
+				case 9:  range = " 181 ~ 190: ";  break;
+				case 10: range = " 191 ~ 200: ";  break;
+				default: range = " 201 이상: ";	break;
+			}
+            		System.out.println(range + heightFreq[i] + "명");
 		}
 		System.out.println("-------------------------------------------");
 		System.out.println();
@@ -272,12 +257,12 @@ public class Student {
 		for(int i = 0; i < weightFreq.length; i++) {
 			String range;
 			switch(i) {
-				case 0:	range 	= " 20kg 이하: ";		break;
-				case 1:	range 	= " 21~40kg: ";		break;
-				case 2: range 	= " 41~60kg: ";		break;
-				case 3: range 	= " 61~80kg: ";		break;
-				case 4: range	= " 81~100kg: ";	break;
-				default: range	= " 101kg 이상: ";	break;
+				case 0:	range 	= " 20kg 이하: ";	 break;
+				case 1:	range 	= " 21~40kg: ";	   break;
+				case 2: range 	= " 41~60kg: ";	   break;
+				case 3: range 	= " 61~80kg: ";	   break;
+				case 4: range	= " 81~100kg: ";   break;
+				default: range	= " 101kg 이상: "; break;
 			}
 			System.out.println(range + weightFreq[i] + "명");
 		}
@@ -295,4 +280,3 @@ public class Student {
 		System.out.println();	
 	}
 }
-
