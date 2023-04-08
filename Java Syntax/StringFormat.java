@@ -27,21 +27,21 @@ public class StringFormat {
 		
 		// %f( = Floating point Formatting )
 		double d = 123.45678;
-		System.out.println(String.format("%f", d));		// (123.456780)		, 기본 출력( %f = %.6f )
-		System.out.println(String.format("%.1f", d));		// (123.5)		, 출력 자릿수 설정( 점(.) 뒤에 숫자를 입력하면 된다), 반올림 된다
-		System.out.println(String.format("%15f_", d));		// (     123.456780_)	, 출력 공간 15자리 확보( 우측 정렬 ), 소수점도 길이에 포함
-		System.out.println(String.format("%15.2f_", d));	// (         123.46_)	, 출력 공간 15자리 확보( 우측 정렬 ), 소수점도 길이에 포함 + 소수점 아래 2자
-		System.out.println(String.format("%-15f_", d));		// (123.456780     _)	, 출력 공간 15자리 확보( 좌측 정렬 ), 소수점도 길이에 포함
-		System.out.println(String.format("%-15.2f_", d));	// (123.46         _)	, 출력 공간 15자리 확보( 좌측 정렬 ), 소수점도 길이에 포함
+		System.out.println(String.format("%f", d));		// (123.456780)			, 기본 출력( %f = %.6f )
+		System.out.println(String.format("%.1f", d));		// (123.5)			, 출력 자릿수 설정( 점(.) 뒤에 숫자를 입력하면 된다), 반올림 된다
+		System.out.println(String.format("%15f_", d));		// (     123.456780_)		, 출력 공간 15자리 확보( 우측 정렬 ), 소수점도 길이에 포함
+		System.out.println(String.format("%15.2f_", d));	// (         123.46_)		, 출력 공간 15자리 확보( 우측 정렬 ), 소수점도 길이에 포함 + 소수점 아래 2자
+		System.out.println(String.format("%-15f_", d));		// (123.456780     _)		, 출력 공간 15자리 확보( 좌측 정렬 ), 소수점도 길이에 포함
+		System.out.println(String.format("%-15.2f_", d));	// (123.46         _)		, 출력 공간 15자리 확보( 좌측 정렬 ), 소수점도 길이에 포함
 		System.out.println();
 		
 		// 10진수 -> n진수. %o, %x( = Octal/Hex Formatting ), %c( = Unicode char Formatting ) 
 		int n = 100;
-		System.out.println(String.format("%d", n));					// 100		, 10진수 출력
-		System.out.println(String.format("%s", Integer.toBinaryString(n)));		// 1100100	, 2진수 출력
-		System.out.println(String.format("%o", n));					// 144		, 8진수 출력
-		System.out.println(String.format("%x", n));					// 64		, 16진수 출력
-		System.out.println(String.format("%c", n));					// d		, 숫자를 유니코드로 변환
+		System.out.println(String.format("%d", n));				// 100		, 10진수 출력
+		System.out.println(String.format("%s", Integer.toBinaryString(n)));	// 1100100	, 2진수 출력
+		System.out.println(String.format("%o", n));				// 144		, 8진수 출력
+		System.out.println(String.format("%x", n));				// 64		, 16진수 출력
+		System.out.println(String.format("%c", n));				// d		, 숫자를 유니코드로 변환
 		System.out.println();
 		
 		// %t( DateTime Formatting )
