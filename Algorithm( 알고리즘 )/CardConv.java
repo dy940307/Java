@@ -61,7 +61,7 @@ public class CardConv {
 			radix = sc.nextInt();
 		} while(radix < 2 || radix > 36);
 			
-		// 진법 변환할 경우의 자릿값을 구해서 이 값으로 배열 크기 설정( 배열 크기 동적 할당 )
+		// 진법 변환 후의 자릿값을 구한 후 이 값을 활용하여 배열 크기 설정( 배열 크기 동적 할당 )
 		int len = (int)(Math.log(no) / Math.log(radix)) + 1;
 		char[] cno = new char[len];
 		
@@ -69,6 +69,7 @@ public class CardConv {
 		cardConv(no, radix, cno);
 		
 		// 결괏값 출력
+		System.out.print("입력하신 " + no + "는(은) " + radix + "진수로 ");
 		for(int i = 0; i < cno.length; i++)
 			System.out.print(cno[i]);
 		System.out.println("입니다.");
