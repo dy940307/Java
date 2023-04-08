@@ -257,11 +257,11 @@ public class Student {
 			String range;
 			switch(i) {
 				case 0:	range 	= " 20kg 이하: ";	break;
-				case 1:	range 	= " 21~40kg: ";		break;
-				case 2: range 	= " 41~60kg: ";		break;
-				case 3: range 	= " 61~80kg: ";		break;
-				case 4: range	= " 81~100kg: ";	break;
-				default: range	= " 101kg 이상: ";	break;
+				case 1:	range 	= " 21~40kg: ";	break;
+				case 2: range 	= " 41~60kg: ";	break;
+				case 3: range 	= " 61~80kg: ";	break;
+				case 4: range	= " 81~100kg: ";break;
+				default: range	= " 101kg 이상: ";break;
 			}
 			System.out.println(range + weightFreq[i] + "명");
 		}
