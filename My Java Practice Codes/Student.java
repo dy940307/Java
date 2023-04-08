@@ -178,7 +178,6 @@ public class Student {
 		System.out.println("학생 정보(이름, 키, 몸무게, 시력)를 입력합니다.");
 		System.out.println("----------------------------------");
 		for(int i = 0; i < studentCount; i++) {
-
 			// 학생 이름 입력
 			System.out.print((i+1) + "번 학생 이름: " );
 			studentName = sc.nextLine();
