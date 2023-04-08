@@ -77,8 +77,8 @@ public class Student {
 	    				min = students[i].height;
 	    			else if (students[i].height > max)
 	    				max = students[i].height;
-	    			}
-	    			break;
+			}
+			break;
 	    	case "weight": // 입력받은 학생 몸무게의 최솟값과 최댓값을 구한다
 	            min = students[0].weight;
 	            max = students[0].weight;
@@ -88,7 +88,7 @@ public class Student {
 	                else if (students[i].weight > max)
 	                    max = students[i].weight;
 	            }
-	            break;
+			break;
 	        case "vision": // 입력받은 학생 시력의 최솟값과 최댓값을 구한다
 	            min = students[0].vision;
 	            max = students[0].vision;
@@ -98,7 +98,7 @@ public class Student {
 	                else if (students[i].vision > max)
 	                    max = students[i].vision;
 	            }
-	            break;
+			break;
 	        default: // 존재하지 않는 학생 정보( 키, 몸무게, 시력 등 )일 경우 유효하지 않는 값이라고 화면에 출력한다
 	            System.out.println("Invalid field");
 	            return null;
