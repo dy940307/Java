@@ -60,21 +60,21 @@ public class StringFormat {
 		
 		Date date = new Date();
 		
-		System.out.println(String.format("%tF", date));					// 2023-04-08
-		System.out.println(String.format("%tT", date));					// 17:58:13
-		System.out.println(String.format("%tF %tT", date, date));			// 2023-04-08 17:58:13
-		System.out.println(String.format("%ty", date));					// 23
-		System.out.println(String.format("%tm", date));					// 04
-		System.out.println(String.format("%td", date));					// 08
-		System.out.println(String.format("%tH", date));					// 17
-		System.out.println(String.format("%tM", date));					// 58
-		System.out.println(String.format("%tS", date));					// 13
+		System.out.println(String.format("%tF", date));				// 2023-04-08
+		System.out.println(String.format("%tT", date));				// 17:58:13
+		System.out.println(String.format("%tF %tT", date, date));		// 2023-04-08 17:58:13
+		System.out.println(String.format("%ty", date));				// 23
+		System.out.println(String.format("%tm", date));				// 04
+		System.out.println(String.format("%td", date));				// 08
+		System.out.println(String.format("%tH", date));				// 17
+		System.out.println(String.format("%tM", date));				// 58
+		System.out.println(String.format("%tS", date));				// 13
 		System.out.println();
 		
 		// Locale( 국가별 포맷 설정, Locale 미설정 시 OS에 설정된 값 적용 ).
-		System.out.println(String.format("%tp", date));					// 오후
-		System.out.println(String.format(Locale.ENGLISH,"%tp", date));			// pm
-		System.out.println(String.format(Locale.JAPAN,"%tp", date));			// 午後
+		System.out.println(String.format("%tp", date));				// 오후
+		System.out.println(String.format(Locale.ENGLISH,"%tp", date));		// pm
+		System.out.println(String.format(Locale.JAPAN,"%tp", date));		// 午後
 	
 	}
 }
