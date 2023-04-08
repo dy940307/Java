@@ -45,8 +45,6 @@ public class StringFormat {
 		System.out.println();
 		
 		// %t( DateTime Formatting )
-		Date date = new Date();
-		
 		/*
 
 		    %tF	: 연-원-일	
@@ -57,9 +55,10 @@ public class StringFormat {
 		    %tH	: 시, 24-hour
 		    %tM	: 분, minute
 		    %tS	: 초, second
-		    %tp : 오전, 오후
-		    
+		    %tp : 오전, 오후    
 		 */
+		
+		Date date = new Date();
 		
 		System.out.println(String.format("%tF", date));					// 2023-04-08
 		System.out.println(String.format("%tT", date));					// 17:58:13
