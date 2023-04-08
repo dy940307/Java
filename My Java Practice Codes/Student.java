@@ -232,7 +232,7 @@ public class Student {
 		for(int i = 0; i < heightFreq.length; i++) {
 			String range;
            		switch(i) {
-                		case 0:  range = " 100 이하: ";	break;
+                		case 0:  range = " 100 이하: ";	 break;
 				case 1:  range = " 101 ~ 110: ";  break;
 				case 2:  range = " 111 ~ 120: ";  break;
 				case 3:  range = " 121 ~ 130: ";  break;
@@ -243,7 +243,7 @@ public class Student {
 				case 8:  range = " 171 ~ 180: ";  break;
 				case 9:  range = " 181 ~ 190: ";  break;
 				case 10: range = " 191 ~ 200: ";  break;
-				default: range = " 201 이상: ";	break;
+				default: range = " 201 이상: ";	 break;
 			}
             		System.out.println(range + heightFreq[i] + "명");
 		}
@@ -256,7 +256,7 @@ public class Student {
 		for(int i = 0; i < weightFreq.length; i++) {
 			String range;
 			switch(i) {
-				case 0:	range 	= " 20kg 이하: ";	 break;
+				case 0:	range 	= " 20kg 이하: ";break;
 				case 1:	range 	= " 21~40kg: ";	   break;
 				case 2: range 	= " 41~60kg: ";	   break;
 				case 3: range 	= " 61~80kg: ";	   break;
