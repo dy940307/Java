@@ -26,20 +26,20 @@ import java.util.Scanner;
 
 public class CardConv {
 	// 진법 변환하는 메서드
-	static void cardConv(int n, int r, char[] d) {
-		String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	static void cardConv(int n, int r, char[] c) {
+		String str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 		// 10진수와 r진수의 나머지 값에 해당하는 값을 dchar 변수에 있는 값을 참조해서 배열 d에 저장
-		for(int i = 0; i < d.length; i++) {
-			d[i] = dchar.charAt(n % r);
+		for(int i = 0; i < c.length; i++) {
+			c[i] = str.charAt(n % r);
 			n /= r;
 		}
 		
 		// 배열 d에 저장한 나머지 값들을 역순으로 정렬
-		for (int i = 0; i < d.length / 2; i++) {
-			char t = d[i];
-			d[i] = d[d.length - i - 1];
-			d[d.length - i - 1] = t;
+		for (int i = 0; i < c.length / 2; i++) {
+			char tmp = c[i];
+			c[i] = c[c.length - i - 1];
+			c[c.length - i - 1] = tmp;
 		} 
 	}
 	
