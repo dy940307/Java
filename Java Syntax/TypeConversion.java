@@ -4,7 +4,7 @@ public class TypeConversion  {
 	public static void main(String[] args) {
 		
 		// 숫자를 문자로 변환 
-		System.out.println(3 + '0');			// 출력 결과 : 51	, ASCII 코드에서 '0'은 48이다. 48과 3을 더하면 정수 51이 된다.
+		System.out.println(3 + '0');			// 출력 결과 : 51, ASCII 코드에서 '0'은 48이다. 48과 3을 더하면 정수 51이 된다.
 		System.out.println((char)(3 + '0'));		// 출력 결과 : 3	, ASCII 코드에서 51은 문자 '3'을 나타낸다. 51을 char 타입으로 캐스팅하면 문자 '3'이 된다.
 		
 		// 문자열을 문자로 변환1
