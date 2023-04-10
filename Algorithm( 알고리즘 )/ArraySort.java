@@ -14,14 +14,14 @@ public class ArraySort {
 	}
 	
 	// 배열 a의 요소를 역순으로 정렬
-	static void sortReverse(int[] a) {
+	static void reverseSort(int[] a) {
 		for(int i = 0; i < a.length / 2; i++) {
 			swap(a, i, a.length - i - 1);
 		}
 	}
 	
 	// 배열 a의 요소를 오름차순으로 정렬
-	static void sortAscending(int[] a) {
+	static void ascendingSort(int[] a) {
 		for(int i = 0; i < a.length; i++) {
 			for(int j = i + 1; j < a.length; j++) {
 				if(a[j] < a[i])
@@ -31,7 +31,7 @@ public class ArraySort {
 	}
 	
 	// 배열 a의 요소를 내림차순으로 정렬
-	static void sortDescending(int[] a) {
+	static void descendingSort(int[] a) {
 		for(int i = 0; i < a.length; i++) {
 			for(int j = i + 1; j < a.length; j++) {
 				if(a[j] > a[i])
@@ -62,15 +62,15 @@ public class ArraySort {
 		System.out.println("배열 값 출력: " + Arrays.toString(arr));
 		
 		// 배열 요소 역순 정렬
-		sortReverse(arr);
+		reverseSort(arr);
 		System.out.println("배열 값 역순 출력: " + Arrays.toString(arr));
 		
 		// 배열 요소 오름차순 정렬
-		sortAscending(arr);
+		ascendingSort(arr);
 		System.out.println("배열 값 오름차순 출력: " + Arrays.toString(arr));
 		
 		// 배열 요소 내림차순 정렬
-		sortDescending(arr);
+		descendingSort(arr);
 		System.out.println("배열 값 내림차순 출력: " + Arrays.toString(arr));	
 	}
 }
