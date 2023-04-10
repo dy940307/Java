@@ -1,13 +1,11 @@
 package study1;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayFrequency {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Random rand = new Random();
 		
 		// 배열 생성
 		int[] arr = new int[10];
