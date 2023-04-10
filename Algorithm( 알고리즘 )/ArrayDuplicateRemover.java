@@ -38,7 +38,7 @@ public class ArrayDuplicateRemover {
 		int[] result = removeDuplicates(arr);
 		
 		// 중복 제거 전과 제거 후의 값 출력
-		System.out.println("중복 제거 전: " + Arrays.toString(arr));		// [1, 6, 4, 4, 5, 6, 1, 2, 5]
+		System.out.println("중복 제거 전: " + Arrays.toString(arr));	 // [1, 6, 4, 4, 5, 6, 1, 2, 5]
 		System.out.println("중복 제거 후: " + Arrays.toString(result));	// [1, 6, 4, 5, 2]
 	}
 }
