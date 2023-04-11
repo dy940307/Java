@@ -30,7 +30,7 @@ public class CardinalConverter  {
 	// 진법 변환에 사용되는 메서드( 매개변수 n은 10진수 정수,매개변수 r은 기수 )
 	static char[] cardinalConversion(int n, int r) {
 		
-		// 2 ~ 36진수로 진법 변환 대응표
+		// 2 ~ 36진수 진법 변환 대응 값
 		String str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
 		// 진법 변환한 결괏값을 저장할 배열 생성. 
@@ -38,7 +38,7 @@ public class CardinalConverter  {
 		int len = (int)(Math.log(n) / Math.log(r)) + 1;
 		char[] cardinalNum = new char[len]; 
 		
-		// 입력받은 정수와 기수를 나눈 나머지 값에 해당하는 값( str 변수의 "01234...Z" )을 배열에 저장.
+		// 입력받은 정수와 기수를 나눈 나머지 값에 해당하는 값( str 변수의 "01234...Z" 문자열 중 1개 )을 배열에 저장.
 		for(int i = 0; i < cardinalNum.length; i++) {
 			cardinalNum[i] = str.charAt(n % r);
 			n /= r;
