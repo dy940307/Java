@@ -18,16 +18,13 @@ import java.util.Scanner;
 
 public class SumVerbose {		
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
-		int n;
-		int sum = 0;
+		Scanner sc = new Scanner(System.in);
+		int n, sum = 0;
 		
-		// n값 입력
-		do {
+		do { // n값 입력
 			System.out.print("n값: ");
-			n = stdIn.nextInt();
-		} while(n <= 0);
-		
+			n = sc.nextInt();
+		} while(n < 1);
 		
 		// 1부터 n값 전까지 "i+" 출력, 그러면서 1부터 n값 전까지의 총합도 구한다
 		for(int i = 1; i < n; i++) {
