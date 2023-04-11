@@ -35,25 +35,20 @@ public class SumOf {
 	}
 	
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
-		int n1, n2, sumOf;
-		
-		// 값 두 개 입력
-		do {
-			System.out.print("첫 번째 값: ");
-			n1 = stdIn.nextInt();
-		} while(n1 <= 0);
+		Scanner sc = new Scanner(System.in);
+		int n1, n2;
 		
 		do {
-			System.out.print("두 번째 값: ");
-			n2 = stdIn.nextInt();
-		} while(n2 <= 0);
+			System.out.print("첫 번째 값 입력: ");
+			n1 = Integer.parseInt(sc.nextLine());
+		} while(n1 < 0);
 		
-		// 입력받은 n1과 n2의 값을 sumOf() 메서드 매개변수로 전달
-		sumOf = sumOf(n1, n2);
+		do {
+			System.out.print("두 번째 값 입력: ");
+			n2 = Integer.parseInt(sc.nextLine());
+		} while(n2 < 0);
 		
 		// 입력받은 두 값 사이의 합 출력
-		System.out.println("입력한 " + n1 + "부터 " + n2 + "까지의 합은" + sumOf + "입니다.");
-
+		System.out.println("입력한 " + n1 + "부터 " + n2 + "까지의 합은" + sumOf(n1, n2) + "입니다.");
 	}
 }
