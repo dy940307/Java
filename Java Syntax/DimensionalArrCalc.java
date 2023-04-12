@@ -1,9 +1,9 @@
 package study;
 
-public class DimensionalArrCalc {
+public class twoDimensionalArrCalc {
 	
 	// 다차원 배열에 저장된 모든 요소의 총합을 구하는 메서드
-	 static int getDimensionalArraySum(int[][] a) {
+	 static int getTwoDimensionalArraySum(int[][] a) {
 		 int sum = 0;	// 다차원 배열의 총합을 저장할 변수
 		 
 		 // 다차원 배열의 총합을 구한다
@@ -17,9 +17,9 @@ public class DimensionalArrCalc {
 	 }
 	 
 	 // 다차원 배열에 저장된 모든 요소의 평균을 구하는 메서드
-	 static double getDimensionalArrayAvg(int[][] a) {
+	 static double getTwoDimensionalArrayAvg(int[][] a) {
 		 double sum = getDimensionalArraySum(a);	// 평균을 구하기 위한 배열 총합 구하기
-		 double count = 0;							// 평균을 구하기 위한 계산에 사용될 배열 요소의 총개수를 저장할 변수
+		 double count = 0;				// 평균을 구하기 위한 계산에 사용될 배열 요소의 총개수를 저장할 변수
 		 
 		 // 다차원 배열의 각 행마다 가진 요소의 개수를 count 변수에 저장하여 배열 요소의 총개수를 구한다
 		 for(int i = 0; i < a.length; i++) {
@@ -30,7 +30,7 @@ public class DimensionalArrCalc {
 	 }
 	 
 	 // 다차원 배열에 저장된 요소 중 최댓값을 구하는 메서드
-	 static int getDimensionalArrayMax(int[][] a) {
+	 static int getTwoDimensionalArrayMax(int[][] a) {
 		 int max = a[0][0]; // 다차원 배열의 첫 번째 값으로 초깃값 설정
 		 
 		 // 현재 배열 a[i][j]의 값이 기존에 저장된 max( 최댓값 )보다 크면 a[i][j]의 값을 max에 저장한다
@@ -45,7 +45,7 @@ public class DimensionalArrCalc {
 	 }
 	 
 	 // 다차원 배열에 저장된 요소 중 최솟값을 구하는 메서드
-	 static int getDimensionalArrayMin(int[][] a) {
+	 static int getTwoDimensionalArrayMin(int[][] a) {
 		 int min = a[0][0]; // 다차원 배열의 첫 번째 값으로 초깃값 설정
 		 
 		 // 현재 배열 a[i][j]의 값이 기존에 저장된 min( 최솟값 )보다 작으면 a[i][j]의 값을 min에 저장한다
@@ -67,9 +67,9 @@ public class DimensionalArrCalc {
 				{30, 30, 30, 30, 30}
 		};
 		
-		System.out.println("총합: " + getDimensionalArraySum(arr));
-		System.out.println("평균: " + getDimensionalArrayAvg(arr));
-		System.out.println("최댓값: " + getDimensionalArrayMax(arr));
-		System.out.println("최솟값: " + getDimensionalArrayMin(arr));
+		System.out.println("총합: " + getTwoDimensionalArraySum(arr));
+		System.out.println("평균: " + getTwoDimensionalArrayAvg(arr));
+		System.out.println("최댓값: " + getTwoDimensionalArrayMax(arr));
+		System.out.println("최솟값: " + getTwoDimensionalArrayMin(arr));
 	}
 }        
