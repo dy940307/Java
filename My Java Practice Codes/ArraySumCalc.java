@@ -24,9 +24,9 @@ public class ArraySumCalc {
 		// result 배열 초기화. score 배열의 값을 result 배열에 복사하고, 각 행과 열의 합계를 계산하여 result 배열에 저장한다.
 		for(int i = 0; i < score.length; i++) {
 			for(int j = 0; j < score[i].length; j++) {
-				result[i][j] = score[i][j]; 										// score의 모든 요소를 result에 복사
-				result[i][result[0].length - 1] += result[i][j];					// 각 열의 합계 구하기
-				result[result.length - 1][j] += result[i][j];						// 각 행의 합계 구하기
+				result[i][j] = score[i][j]; 						// score의 모든 요소를 result에 복사
+				result[i][result[0].length - 1] += result[i][j];			// 각 열의 합계 구하기
+				result[result.length - 1][j] += result[i][j];				// 각 행의 합계 구하기
 				result[result.length - 1][result[0].length - 1] += result[i][j];	// 모든 요소의 합계 구하기
 			}
 		}
