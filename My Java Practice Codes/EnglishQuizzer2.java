@@ -29,7 +29,7 @@ public class EnglishQuizzer2 {
 			question[i] = question[idx];
 			question[idx] = tmp;
 			
-			// 단어 글자 위치 섞은 후 문제 출력
+			// 단어 글자 위치 섞은 후 문제 출력( ex : Q1. ksed의 정답을 입력하세요. )
 			System.out.printf("Q%d. %s의 정답을 입력하세요.", i+1, new String(question));
 			String answer = sc.nextLine();
 			
