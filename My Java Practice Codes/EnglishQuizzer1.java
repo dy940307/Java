@@ -28,12 +28,12 @@ public class EnglishQuizzer1  {
 			System.out.printf("Q%d. %s의 뜻은?:", i+1, words[i][0]);
 			String answer = sc.nextLine();
 			
-			// 사용자가 입력한 답과 단어장의 한글 뜻이 같은지 비교하여 정답인지 체크
-			if(answer.equals(words[i][1])) {
-				System.out.printf("정답입니다.\n\n");
+			// trim()으로 좌우 공백 제거 후, 사용자가 입력한 답과 단어장에 있는 단어와 같은지 비교
+			if(words[i][1].equals(answer.trim())) {
+				System.out.println("정답입니다.");
 				score++;
 			} else {
-				System.out.printf("틀렸습니다. 정답은 %s입니다.\n\n", words[i][1]);
+				System.out.printf("틀렸습니다. 정답은 %s입니다.\n", words[i][1]);
 			}
 		} // for문의 끝
 	
