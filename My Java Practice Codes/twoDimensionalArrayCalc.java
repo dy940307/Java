@@ -69,7 +69,7 @@ public class twoDimensionalArrCalc  {
 		
 		System.out.println("총합: " + getTwoDimensionalArraySum(arr));		// 325
 		System.out.println("평균: " + getTwoDimensionalArrayAvg(arr));		// 16.25
-		System.out.println("최댓값: " + getTwoDimensionalArrayMax(arr));	       // 30
-		System.out.println("최솟값: " + getTwoDimensionalArrayMin(arr));	       // 5
+		System.out.println("최댓값: " + getTwoDimensionalArrayMax(arr));		// 30
+		System.out.println("최솟값: " + getTwoDimensionalArrayMin(arr));		// 5
 	}
 }        
