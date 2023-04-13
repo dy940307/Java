@@ -10,7 +10,7 @@ import java.util.Scanner;
 	 4. 단어장의 마지막 단어까지 진행했으면 몇 문제 중 몇 문제 맞혔는지 결과가 출력된다. 
 */
 
-public class EnglishQuizzer  {
+public class EnglishQuizzer1  {
 	public static void main(String[] args) {
 		// 퀴즈용 단어장
 		String[][] words = {
