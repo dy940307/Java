@@ -66,10 +66,10 @@ public class ArrayCopy {
 		// 2.5 깊은 복사( System.arraycopy ) : 이미 생성되어 있는 배열에다가 다른 배열의 요소를 복사할 때 사용( 앞의 복사 메서드들은 새로운 배열을 생성하면서 사용 가능 )
 		int[] array15 = {1, 2, 3, 4, 5};
 		int[] array16 = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-		System.arraycopy(array15, 0, array16, 0, 0);				// arr15의 0번 인덱스부터 복사, 복사한 것을 arr16의 0번 인덱스부터 붙여 넣는다. 복사할 요소의 길이는 0 )
-		System.out.println("array16: " + Arrays.toString(array16));		// 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+		System.arraycopy(array15, 0, array16, 0, 0);			// arr15의 0번 인덱스부터 복사, 복사한 것을 arr16의 0번 인덱스부터 붙여 넣는다. 복사할 요소의 길이는 0 )
+		System.out.println("array16: " + Arrays.toString(array16));	// 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
 		System.arraycopy(array15, 0, array16, 0, 5);
-		System.out.println("array16: " + Arrays.toString(array16));		// 1, 2, 3, 4, 5, 60, 70, 80, 90, 100
-		// System.arraycopy(array15, 0, array16, 0, 10);			// 오류( 복사하려는 array15의 길이는 5인데 복사할 요소의 길이가 10이므로 범위를 벗어남 )
+		System.out.println("array16: " + Arrays.toString(array16));	// 1, 2, 3, 4, 5, 60, 70, 80, 90, 100
+		// System.arraycopy(array15, 0, array16, 0, 10);		// 오류( 복사하려는 array15의 길이는 5인데 복사할 요소의 길이가 10이므로 범위를 벗어남 )
 	} 
 }
