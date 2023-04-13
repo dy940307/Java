@@ -9,7 +9,7 @@ package study;
 
 public class StringEncryptor  {
 	public static void main(String[] args) {	
-		// 소문자 암호 코드	 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+		// 소문자 암호 코드	'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
 		char[] abcCode = {	'~', '!', '@', '#', '$', '%', '^', '&', '*', '(', 
 		//  			'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
 					')', '-', '_', '+', '=', '[', ']', '{', '}', ';',
