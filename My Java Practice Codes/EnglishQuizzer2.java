@@ -12,7 +12,6 @@ import java.util.Scanner;
 */
 
 public class EnglishQuizzer2 {
-	
 	// 단어 글자 위치를 섞기 위한 메서드
 	static void shuffleArray(char[] a) {
 		for(int i = 0; i < a.length; i++) {
