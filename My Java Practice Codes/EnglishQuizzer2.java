@@ -12,6 +12,18 @@ import java.util.Scanner;
 */
 
 public class EnglishQuizzer2 {
+	
+	// 단어 글자 위치를 섞기 위한 메서드
+	static void shuffleArray(char[] a) {
+		for(int i = 0; i < a.length; i++) {
+			int idx = (int)(Math.random() * a.length);
+			
+			char tmp = a[i];
+			a[i] = a[idx];
+			a[idx] = tmp;
+		}
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -25,16 +37,13 @@ public class EnglishQuizzer2 {
 			char[] question = words[i].toCharArray();
 			int idx = (int)(Math.random() * question.length);
 			
-			char tmp = question[i];
-			question[i] = question[idx];
-			question[idx] = tmp;
-			
 			// 단어 글자 위치 섞은 후 문제 출력( ex : Q1. ksed의 정답을 입력하세요. )
+			shuffleArray(question);
 			System.out.printf("Q%d. %s의 정답을 입력하세요.", i+1, new String(question));
 			String answer = sc.nextLine();
 			
 			// trim()으로 좌우 공백 제거 후, 사용자가 입력한 답과 단어장에 있는 단어와 같은지 비교
-			if(answer.equals(words[i]))
+			if(words[i].equals(answer.trim()))
 				System.out.println("정답입니다.");
 			else
 				System.out.println("틀렸습니다.");
