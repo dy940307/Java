@@ -27,33 +27,32 @@ public class CoinChanger  {
 		int[] coinNums = {5, 5, 5, 5};		// 500원, 100원, 50원, 10원 동전의 개수
 		
 		
-		// 입력받은 금액을 거슬러 주기 위해 필요한 동전 단위별 개수 구하는 과정( 최대한 동전을 적게 거슬러 주기 위해 큰 단위인 500원부터 체크한다 )
+		// 500원 -> 100원 -> 50원 -> 10원 순서로 거슬러 주어야 하는 동전의 개수를 구해서 거슬러주는 작업을 처리한다.
 		 /* ex : 입력받은 금액이 2,600원이라면 500원의 경우 '2,600원 / 500원 = 5개', 500원 5개가 필요하다. 현재 가지고 있는 500원의 개수를 체크해서 얼마만큼 거슬러 줄 수 있는지 체크해서 거슬러준다. */
 		for(int i = 0; i < coinUnit.length; i++) {
-			// 동전 단위별로 거슬러 주어야 하는 동전 개수 구하기
-			int coinCounts = 0;
-			coinCounts = money / coinUnit[i];	
+			// 각 동전마다 거슬러 주어야 하는 동전 개수
+			int coinCounts = money / coinUnit[i];	
 			
-			// 동전 개수 차감하기
+			// 동전 개수 차감
 			if(coinNums[i] >= coinCounts) { 
 				coinNums[i] -= coinCounts;
-			} else { // 현재 동전 개수가 거슬러 주어야 할 동전 개수보다 부족할 경우 현재 남아있는 개수를 전부 차감시킨다
+			} else {
 				coinCounts = coinNums[i];
 				coinNums[i] = 0;
 			}
 			
-			// 사용자가 입력한 금액 차감하기
+			// 차감된 동전 개수만큼 사용자가 입력한 금액 차감
 			money -= coinCounts * coinUnit[i];
 			
-			// 동전 단위별로 몇 개씩 거슬러주었는지 대한 정보를 화면에 출력
+			// 거슬러주기 위해 동전을 몇 개 소모했는 지에 대한 정보 출력( ex : 500원: 3개, 100원: 2개 )
 			System.out.println(coinUnit[i] + "원: " + coinCounts);
 		}
 		
-		// 현재 가지고 있는 동전을 전부 소모해서도 거슬러 주지 못했을 경우
+		// 동전이 부족하여 전부 거슬러주지 못했을 경우
 		if(money > 0)
 			System.out.println("거스름돈이 부족합니다.");
 		
-		// 남은 동전의 개수 출력
+		// 거슬러주고 난 후 동전 단위별로 몇 개 남았는지에 대한 정보 출력
 		System.out.println("--남은 동전의 개수-- ");
 		for(int i = 0; i < coinUnit.length; i++) {
 			System.out.println(coinUnit[i] + "원: " + coinNums[i]);
