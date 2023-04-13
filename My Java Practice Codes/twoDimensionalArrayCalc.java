@@ -18,15 +18,15 @@ public class twoDimensionalArrCalc  {
 	 
 	 // 다차원 배열에 저장된 모든 요소의 평균을 구하는 메서드
 	 static double getTwoDimensionalArrayAvg(int[][] a) {
-		 double sum = getTwoDimensionalArraySum(a);	// 평균을 구하기 위한 배열 총합 구하기
-		 double count = 0;				// 평균을 구하기 위한 계산에 사용될 배열 요소의 총개수를 저장할 변수
-		 
-		 // 다차원 배열의 각 행마다 가진 요소의 개수를 count 변수에 저장하여 배열 요소의 총개수를 구한다
-		 for(int i = 0; i < a.length; i++) {
-			 count += a[i].length;
-		 }
+		 int count = 0; // 배열 요소의 총개수를 저장할 변수( 평균을 구하기 위한 계산식에 사용 )
 		
-		 return sum / count; // 평균 리턴
+		// 배열 요소의 총 개수 구하기
+		for(int i = 0; i < a.length; i++) {
+			count += a[i].length;
+		}
+		
+		// 합계를 구하는 메서드를 활용하여 곧바로 평균을 구한 뒤 리턴
+		return (double)getTwoDimensionalArraySum(a) / count;
 	 }
 	 
 	 // 다차원 배열에 저장된 요소 중 최댓값을 구하는 메서드
@@ -67,9 +67,9 @@ public class twoDimensionalArrCalc  {
 				{30, 30, 30, 30, 30}
 		};
 		
-		System.out.println("총합: " + getTwoDimensionalArraySum(arr));
-		System.out.println("평균: " + getTwoDimensionalArrayAvg(arr));
-		System.out.println("최댓값: " + getTwoDimensionalArrayMax(arr));
-		System.out.println("최솟값: " + getTwoDimensionalArrayMin(arr));
+		System.out.println("총합: " + getTwoDimensionalArraySum(arr));		// 325
+		System.out.println("평균: " + getTwoDimensionalArrayAvg(arr));		// 16.25
+		System.out.println("최댓값: " + getTwoDimensionalArrayMax(arr));	       // 30
+		System.out.println("최솟값: " + getTwoDimensionalArrayMin(arr));	       // 5
 	}
 }        
