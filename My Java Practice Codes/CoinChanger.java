@@ -16,15 +16,15 @@ import java.util.Scanner;
 public class CoinChanger  {
 	public static void main(String[] args) {	
 		Scanner sc = new Scanner(System.in);
-		int money;
+		int money;				// 사용자가 입력한 금액
+		int[] coinUnit = {500, 100, 50, 10};	// 단위별 동전
+		int[] coinNums = {5, 5, 5, 5};		// 500원, 100원, 50원, 10원 동전의 개수
 		
+		// 사용자 금액 입력
 		do {
 			System.out.print("금액 입력: ");
 			money = Integer.parseInt(sc.nextLine());
 		} while( money < 0);
-		
-		int[] coinUnit = {500, 100, 50, 10};	// 단위별 동전
-		int[] coinNums = {5, 5, 5, 5};		// 500원, 100원, 50원, 10원 동전의 개수
 		
 		
 		// 500원 -> 100원 -> 50원 -> 10원 순서로 거슬러 주어야 하는 동전의 개수를 구해서 거슬러주는 작업을 처리한다.
