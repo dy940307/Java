@@ -19,7 +19,7 @@ public class ArrayFrequency   {
 		
 		// 배열 난수 초기화( 1 ~ 10 )
 		for(int i = 0; i < arr.length; i++)
-			arr[i] = (int)(Math.random() * 10 + 1);  
+			arr[i] = (int)(Math.random() * 10) + 1;  
 
 		// 빈도수 계산
 		int[] freqArr = new int[10];
