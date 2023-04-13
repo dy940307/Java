@@ -34,8 +34,7 @@ public class EnglishQuizzer2 {
 			
 			// 단어 글자 위치 섞기( 단어를 문자 단위로 쪼깨어 char 배열에 저장 후 char 배열을 섞는다 )
 			char[] question = words[i].toCharArray();
-			int idx = (int)(Math.random() * question.length);
-			
+		
 			// 단어 글자 위치 섞은 후 문제 출력( ex : Q1. ksed의 정답을 입력하세요. )
 			shuffleArray(question);
 			System.out.printf("Q%d. %s의 정답을 입력하세요.", i+1, new String(question));
