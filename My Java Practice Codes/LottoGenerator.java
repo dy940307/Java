@@ -35,4 +35,4 @@ public class LottoGenerator  {
 			System.out.print(ball7[i] + " ");
 		}
 	}
-}        
+}
