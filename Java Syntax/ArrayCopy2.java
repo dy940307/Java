@@ -7,9 +7,9 @@ public class ArrayCopy2 {
 		// 1.1 얕은 복사( 대입 연산자, clone 메서드 )
 		int[][] array1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 		int[][] array2 = array1;											
-		int[][] array3 = array1.clone();									// 1차원 배열과 달리 2차원 배열은 clone 메서드를 사용해도 얕은 복사가 된다.
+		int[][] array3 = array1.clone();					// 1차원 배열과 달리 2차원 배열은 clone 메서드를 사용해도 얕은 복사가 된다.
 		
-		array3[0][0] = 1000;												// 얕은 복사이므로 array3의 배열값을 변경하면 array1, array2의 값도 변경된다.	
+		array3[0][0] = 1000;							// 얕은 복사이므로 array3의 배열값을 변경하면 array1, array2의 값도 변경된다.	
 		System.out.println("array1: " + Arrays.deepToString(array1));		// [[1000, 2, 3], [4, 5, 6], [7, 8, 9]]	
 		System.out.println("array2: " + Arrays.deepToString(array2));		// [[1000, 2, 3], [4, 5, 6], [7, 8, 9]]
 		System.out.println("array3: " + Arrays.deepToString(array3));		// [[1000, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -26,7 +26,7 @@ public class ArrayCopy2 {
 			}
 		}
 		
-		array5[0][0] = 1000;												// 깊은 복사이므로 array4의 값은 변경되지 않음
+		array5[0][0] = 1000;							// 깊은 복사이므로 array4의 값은 변경되지 않음
 		System.out.println("array4: " + Arrays.deepToString(array4));		// [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 		System.out.println("array5: " + Arrays.deepToString(array5));		// [[1000, 2, 3], [4, 5, 6], [7, 8, 9]]
 		System.out.println();
@@ -34,10 +34,10 @@ public class ArrayCopy2 {
 		
 		// 1.3 깊은 복사( for문 ) : 행마다 열의 길이가 다를 경우
 		int[][] array6 = {{1, 2, 3}, {4, 5}, {6}};
-		int[][] array7 = new int[array6.length][];							// 행마다 열의 길이가 다르므로 먼저 array6의 행 길이만큼만 배열 생성
+		int[][] array7 = new int[array6.length][];				// 행마다 열의 길이가 다르므로 먼저 array6의 행 길이만큼만 배열 생성
 		
 		for(int i = 0; i < array7.length; i++) {
-			array7[i] = new int[array6[i].length];							// 이후 array7의 행마다 array6의 열 길이만큼 배열 생성
+			array7[i] = new int[array6[i].length];				// 이후 array7의 행마다 array6의 열 길이만큼 배열 생성
 			for(int j = 0; j < array7[i].length; j++) {
 				array7[i][j] = array6[i][j];
 			}
