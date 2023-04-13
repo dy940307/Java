@@ -37,7 +37,7 @@ public class EnglishQuizzer2 {
 		
 			// 단어 글자 위치 섞은 후 문제 출력( ex : Q1. ksed의 정답을 입력하세요. )
 			shuffleArray(question);
-			System.out.printf("Q%d. %s의 정답을 입력하세요.", i+1, new String(question));
+			System.out.printf("Q%d. %s의 정답 입력: ", i+1, new String(question));
 			String answer = sc.nextLine();
 			
 			// trim()으로 좌우 공백 제거 후, 사용자가 입력한 답과 단어장에 있는 단어와 같은지 비교
