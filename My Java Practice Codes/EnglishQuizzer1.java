@@ -36,7 +36,7 @@ public class EnglishQuizzer1  {
 				System.out.printf("틀렸습니다. 정답은 %s입니다.\n\n", words[i][1]);
 			}
 		} // for문의 끝
-		
+	
 		// 퀴즈 결과 출력
 		System.out.printf("전체 %d문제 중 %d문제 맞추셨습니다.", words.length, score);
 	}
