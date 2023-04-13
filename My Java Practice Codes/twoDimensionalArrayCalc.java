@@ -19,7 +19,7 @@ public class twoDimensionalArrCalc  {
 	 // 다차원 배열에 저장된 모든 요소의 평균을 구하는 메서드
 	 static double getTwoDimensionalArrayAvg(int[][] a) {
 		 double sum = getTwoDimensionalArraySum(a);	// 평균을 구하기 위한 배열 총합 구하기
-		 double count = 0;							// 평균을 구하기 위한 계산에 사용될 배열 요소의 총개수를 저장할 변수
+		 double count = 0;				// 평균을 구하기 위한 계산에 사용될 배열 요소의 총개수를 저장할 변수
 		 
 		 // 다차원 배열의 각 행마다 가진 요소의 개수를 count 변수에 저장하여 배열 요소의 총개수를 구한다
 		 for(int i = 0; i < a.length; i++) {
