@@ -49,12 +49,12 @@ public class NumPatternPrinting {
 		
 		// 2.1 변수 초깃값 : 0
 		for(int i = 0; i < 20; i++)
-		    System.out.println(10 - (i % 10));
+		    System.out.println(10 - i % 10);
 		System.out.println();
 		
 		// 2.2 변수 초깃값 : 1
 		for(int i = 1; i <= 20; i++) 
-			System.out.println(10 - ((i - 1) % 10));
+			System.out.println(10 - (i - 1) % 10);
 		System.out.println();
 		
 		
