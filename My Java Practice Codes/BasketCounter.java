@@ -20,7 +20,7 @@ public class BasketCounter {
 			appleCount = Integer.parseInt(sc.nextLine());
 		} while(appleCount < 0);
 		
-		int basketCount = (appleCount + 9) / BASKET_SIZE; // ( 1 ~ 9개의 사과도 바구니 1개가 필요하고, 11개 ~ 19개처럼 1의 자리가 0이 아닐 경우 바구니 개수가 1개 더 필요하므로 '+9' 를 해줌 )
+		int basketCount = (appleCount + 9) / BASKET_SIZE; // 1 ~ 9개의 사과도 바구니 1개가 필요하고, 11개 ~ 19개처럼 1의 자리가 0이 아닐 경우 바구니 개수가 1개 더 필요하므로 '+9' 를 해줌
 		System.out.println("사과를 담기 위해 필요한 바구니 개수: " + basketCount);
 	}
 }
