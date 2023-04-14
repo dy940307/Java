@@ -29,17 +29,25 @@ package study;
 public class NumPatternPrinting {
 	public static void main(String[] args) {
 		
-		/* 1. 순환 패턴 ( 1 ~ 10 ) ---- */
-		System.out.println("-- 순환 패턴( 1 ~ 10 ) --");
+		/* 1. 순환 패턴 ---- */
+		System.out.println("1. 순환 패턴 ----");
 		
-		// 1.1 순환 패턴( 1 ~ 10 ) : 변수 초깃값 0
-		for(int i = 0; i < 20; i++)
+		// 1.1 순환 패턴( 1 ~ 10 )
+		for(int i = 0; i < 20; i++) // 변수 초깃값 0
 			System.out.println(i % 10 + 1);
 		System.out.println();
 		
-		// 1.2 순환 패턴( 1 ~ 10 ) : 변수 초깃값 1
-		for(int i = 1; i <= 20; i++) 
+		for(int i = 1; i <= 20; i++) // 변수 초깃값 1
 			System.out.println((i - 1) % 10 + 1);
+		System.out.println();
+		
+		// 1.2 순환 패턴( 3, 6, 9, 3, 6, 9, 3, 6, 9... )
+		for(int i = 0; i <= 20; i++) // 변수 초깃값 0
+			System.out.println((i % 3 + 1) * 3);
+		System.out.println();
+		
+		for(int i = 1; i <= 20; i++) // 변수 초깃값 1
+			System.out.println((( i -1 ) % 3 + 1) * 3);
 		System.out.println();
 		
 		
