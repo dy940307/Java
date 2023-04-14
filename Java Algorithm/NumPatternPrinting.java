@@ -42,11 +42,6 @@ public class NumPatternPrinting {
 			System.out.println((i - 1) % 10 + 1);
 		System.out.println();
 		
-		// 1.3 순환 패턴( 1 ~ 10 ) : 변수 초깃값 1
-		for(int i = 1; i <= 20; i++)
-		    System.out.println(i % 10 == 0 ? 10 : i % 10);
-		System.out.println();
-		
 		
 		
 		/* 2. 순환 패턴 ( 10 ~ 1 ) ---- */
