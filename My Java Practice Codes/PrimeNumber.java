@@ -36,7 +36,7 @@ package study;
 
 public class PrimeNumber{
 	public static void main(String[] args) {
-		long startTime, endTime;						// for문 실행 시간을 체크하기 위한 변수
+		long startTime, endTime;			// for문 실행 시간을 체크하기 위한 변수
 		long elapsedTime1, elapsedTime2, elapsedTime3;	// 1 ~ 3번 알고리즘 실행 시간을 저장하기 위한 변수\
 		
 		// 1번 알고리즘
